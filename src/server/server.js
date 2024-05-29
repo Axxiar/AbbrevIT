@@ -1,21 +1,19 @@
 const express = require('express')
 const path = require('path')
+const dbUtility = require('./dbutility')
 
 const app = express()
 const clientDirPath = path.join(__dirname, "../client")
 
+app.use(express.static(clientDirPath))
 
-app.get("/", (req,res) => {
-    res.send(`<h1>AbbrevIT page</h1>`)
-})
+// app.get("/", (req,res) => {
+//     res.send(`<h1>AbbrevIT page</h1>`)
+// })
 
-app.get("/abbreviations", (req,res) => {
-    res.json({
-        "abbreviations": {
-            "SQL" :["Structured Query Language", "SQL desc"],        
-            "HTML":["HyperText Markup Language", "HTML desc"]
-        }
-    })
+app.get("/abbreviations", async (req,res) => {
+    a = await dbUtility.selectAll();
+    res.send(a);
 })
 
 app.listen(5000, () => {
