@@ -1,0 +1,30 @@
+{
+  "name": "abbrevit",
+  "version": "1.0.0",
+  "description": "A directory website to help you find your way through the jungle of computer abbreviations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Axxiar/AbbrevIT.git"
+  },
+  "keywords": [
+    "abbrevitation",
+    "acronym",
+    "initialism",
+    "ITDB",
+    "AbbrevIT"
+  ],
+  "author": "@Axxiar & @PierreHvrd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Axxiar/AbbrevIT/issues"
+  },
+  "homepage": "https://github.com/Axxiar/AbbrevIT#readme",
+  "dependencies": {
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7"
+  }
+}
